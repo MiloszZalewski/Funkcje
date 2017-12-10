@@ -1,17 +1,17 @@
-function getTriangleArea(a,h) {
+function getTriangleArea(a, h) {
 
-if (a <=0) {
-	console.log ('Nieprawidłowe dane');
+if (a <= 0 || isNaN(a) || h <=0 || isNaN(h)) {
+	return 'Nieprawidłowe dane';
+	}
 
-} else if (h <=0) {
-	console.log ('Nieprawidłowe dane');
+ return (a * h / 2);
 
-} else {
-	return (a*h/2);
-}
-console.log(getTriangleArea(10, 6));
 }
 
-var triangleArea1 = getTriangleArea(10, 15);
-var triangleArea2 = getTriangleArea(5, 12);
+var triangleArea1 = getTriangleArea(10, -15);
+var triangleArea2 = getTriangleArea('a', 12);
 var triangleArea3 = getTriangleArea(8, 16);
+
+console.log(triangleArea1);
+console.log(triangleArea2);
+console.log(triangleArea3);
